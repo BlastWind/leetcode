@@ -11,11 +11,11 @@ void subsetCompute(string cur, string rest)
 		return;
 	}
 	// add the letter AND not add the letter, visualize the recursive call tree to make sense of this
-	subsetCompute(cur + rest[0], rest.substr(1));
 	subsetCompute(cur, rest.substr(1));
+	subsetCompute(cur + rest[0], rest.substr(1));
 }
 
 int main()
 {
-	subsetCompute("", "asdf");
+	subsetCompute("", "123");
 }
