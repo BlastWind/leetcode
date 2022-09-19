@@ -1,0 +1,27 @@
+1. When chosing attempting to cycle through an array, use %
+In this question, we cycle through the directions, this is nicely 
+done by setting up a direction array whose consecutive elements are 
+one turns away from each other: 
+directions = [(0, 1), (1, 0), (0, -1), (-1, 0)]
+and then do 
+for i in range(4): 
+	direction = directions[(i + prevDirection) % 4]
+
+2. Backtracking can happen in children or parent
+I could either do 
+
+recurse(...): 
+	logic 
+	recurse(...) # issue child backtrack call 
+	backtrack() # backtrack after recurse() completes: The parent call resetsthe side effects of the child call
+	logic 
+
+or: 
+
+recurse(...): 
+
+	logic 
+	recurse(...) # issue child backtrack call 
+	logic 
+
+	backtrack() # backtrack at the very end: The child call returns to previous state by itself 

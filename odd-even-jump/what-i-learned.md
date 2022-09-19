@@ -1,0 +1,1 @@
+Neat stack trick to generate next greater elements array from original array. By next greater element, I mean the smallest larger element in regards to the current element. This larger element also must have index greater than the current element. 
