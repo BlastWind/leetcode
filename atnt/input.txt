@@ -1,0 +1,15 @@
+# Lines from this file are used as input for the runProject method.
+# You are welcome to edit this file in order to test various scenarios.
+# Blank lines and lines starting with "#" are not read.
+
+Prius,10/03/2011,Angie
+Challenger,12/01/2018,Sam
+Challenger,06/15/1985,Angie
+Challenger,01/08/1965,Sam
+Camry,01/01/2020,Angie
+Challenger,01/08/2020,Sam
+Challenger,01/08/2020,Zam
+Challenger,01/08/2020,Zam
+Challenger,01/08/2020,Zam
+
+# Expected output: Angie has 3 vehicles and is currently driving a 2011 Toyota Prius that goes 80 mph.

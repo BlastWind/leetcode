@@ -1,4 +1,5 @@
 from collections import deque
+from functools import reduce
 import itertools
 from typing import List
 
@@ -9,7 +10,9 @@ class Solution:
         for _ in range(n-1):
             s = ''.join(str(len(list(group))) + digit for digit,
                         group in itertools.groupby(s))
-        return s
+
+        return reduce(lambda acc, _: ''.join(str(len(list(group))) + digit for digit,
+                                             group in itertools.groupby(acc)), range(n-1), '1')
 
 
 driver = Solution()
